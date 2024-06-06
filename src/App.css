@@ -33,3 +33,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.App form Button {
+  margin-top: 15px;
+}
