@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+  --vd-blue: hsl(220, 13%, 13%);
+  --d-grayish-blue: rgb(104, 112, 125);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --l-grayish-blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  --p-fs: 1rem;
+}
+
 .App {
   text-align: center;
 }
@@ -22,7 +35,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--pale-orange);
 }
 
 @keyframes App-logo-spin {
@@ -34,14 +47,70 @@
   }
 }
 
-
-.App form {
+.App .here {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--orange)!important;
+}
+
 .App form Button {
   margin-top: 15px;
+  background-color: var(--vd-blue);
+}
+
+.App form Button:hover {
+  background-color: var(--orange);
+}
+
+.App .gridAnime .card:hover {
+  transform: scale(110%);
+}
+
+.animeDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+  width: 100vw;
+  height: 85vh;
+  border: 2px solid red;
+}
+
+.animeDetail img {
+  border-radius: 3%;
+  width: 25vw;
+}
+.animeDetail img:hover {
+  transform: scale(110%);
+  transition: .2s;
+}
+.animeDetail .info {
+  border: 2px solid blue;
+  height: 55vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.animeDetail .info .title{
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 30px;
+  text-align: left;
+}
+
+.animeDetail .info .synopsis{
+  text-align: left;
+}
+
+.product .info > p {
+  margin: 0;
+  text-transform: capitalize;
+  text-align: left;
 }

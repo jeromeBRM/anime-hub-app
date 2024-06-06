@@ -10,16 +10,8 @@ function Home() {
   };
   return (
     <div className="App">
-      <FormTexte handlerV={handlerAnime}></FormTexte>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <AffichAnime a={anime}></AffichAnime>
-      </div>
+      <FormTexte className="form" handlerV={handlerAnime}></FormTexte>
+      <AffichAnime a={anime}></AffichAnime>
     </div>
   );
 }

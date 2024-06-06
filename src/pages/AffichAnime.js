@@ -35,21 +35,21 @@ function AffichAnime(props) {
 
   return (
     <div>
-      <Grid container >
+      <Grid className="gridAnime" container >
         {animes.map((i) => {
           console.log(i);
           return (
-            <Card style={{ height: "318px", width: "230px", margin: "1.5%" }}>
+            <Card style={{ height: "318px", width: "230px", margin: "25px"}}>
               <Link to={"/anime/" + i.mal_id}>
-                <CardMedia style={{ height: "200px" }}>
+                <CardMedia className="card" style={{ height: "200px" }}>
                   <img
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    style={{ width: "230px", height: "auto", objectFit: "cover" }}
                     src={i.images.jpg.image_url}
                     alt="affiche"
                   ></img>
                 </CardMedia>
-                <CardContent>
-                  <Typography component="h5">{i.title}</Typography>
+                <CardContent style={{ border: "2px solid white" }}>
+                  <Typography style={{ textDecoration: "none", color:"#fff", fontSize: "15px" }} component="h5">{i.title}</Typography>
                 </CardContent>
               </Link>
             </Card>
