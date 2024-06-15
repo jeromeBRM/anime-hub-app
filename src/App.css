@@ -114,3 +114,24 @@
   text-transform: capitalize;
   text-align: left;
 }
+
+.track-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.track-card__cover {
+  width: 72px;
+  height: 72px;
+}
+
+.track-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
