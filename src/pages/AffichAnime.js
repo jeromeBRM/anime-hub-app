@@ -23,23 +23,20 @@ function AffichAnime(props) {
         .then((dataJSON) => {
           const animeData = dataJSON.data || []; // Check if dataJSON.data exists
           setAnimes(animeData);
-          console.log({ animes: animeData });
         })
         .catch((error) => {
           console.error("Fetch error:", error);
           setAnimes([]); // Set animes to an empty array in case of error
         });
-      console.log(props.a);
     }
   }, [props.a]);
 
   return (
     <div>
       <Grid className="gridAnime" container >
-        {animes.map((i) => {
-          console.log(i);
+        {animes?.map((i) => {
           return (
-            <Card style={{ height: "318px", width: "230px", margin: "25px"}}>
+            <Card key={i.mal_id} style={{ height: "318px", width: "230px", margin: "25px"}}>
               <Link to={"/anime/" + i.mal_id}>
                 <CardMedia className="card" style={{ height: "200px" }}>
                   <img

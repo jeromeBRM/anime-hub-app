@@ -19,7 +19,7 @@ function FormTexte(props) {
   };
   return (
 
-  <form className="here" onSubmit={handleSubmit}>
+  <div className="here">
     <Box
       component="form"
       sx={{
@@ -27,6 +27,7 @@ function FormTexte(props) {
       }}
       noValidate
       autoComplete="off"
+      onSubmit={handleSubmit}
     >
       <TextField
         type="text"
@@ -37,11 +38,11 @@ function FormTexte(props) {
         value={texte}
         onChange={handleChange}
       />
+      <Button type="submit" value="Submit" id="search-button" variant="contained">
+        Rechercher
+      </Button>
     </Box>
-    <Button type="submit" value="Submit" id="search-button" variant="contained">
-      Rechercher
-    </Button>
-  </form>
+  </div>
   );
 }
 
