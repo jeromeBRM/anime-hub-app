@@ -59,22 +59,22 @@ const AnimePage = () => {
             <span> {anime?.popularity}ème of all time</span>
           </div>
         </div>
-      </div>
-      <span><h1>Recettes</h1></span>
       <div className="recette">
+      <span><h1>Recettes</h1></span>
         { recipes?.map((recipe) => {
           return (
             <RecipeCard key={ recipe.id } recipe={ recipe }></RecipeCard>
           );
         })}
       </div>
-      <span><h1>Playlist</h1></span>
       <div className="tracks">
+      <span><h1>Playlist</h1></span>
         { tracks?.map((track) => {
           return (
             <TrackCard key={ track.id } track={ track }></TrackCard>
           );
         })}
+      </div>
       </div>
       <Outlet />
     </div>
