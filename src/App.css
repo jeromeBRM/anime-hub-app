@@ -9,15 +9,31 @@
   --white: hsl(0, 0%, 100%);
 
   --p-fs: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App {
   text-align: center;
+  width: 1000px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.user-inp {
+  width: 120px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -27,11 +43,16 @@
 }
 
 .App-header {
-  height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 2em;
+  width: 1000px;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 2em;
+  margin-top: 1em;
 }
 
 .App-link {
@@ -49,9 +70,29 @@
 
 .App .here {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.formm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.MuiButtonBase-root {
+  width: 160px !important;
+}
+
+.MuiButtonBase-root:hover {
+  color: white;
 }
 
 .css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
@@ -73,28 +114,55 @@
 
 .animeDetail {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 4vw;
-  width: 100vw;
-  height: 85vh;
-  margin-top: 10vh;
-  padding-bottom: 250px!important;
+  gap: 3em;
+  margin-bottom: 4em !important;
+  flex-direction: column;
+  width: 1000px;
+  margin: auto;
 }
 
-.animeDetail img {
-  border-radius: 3%;
-  width: 25vw;
+.user-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
+
+.anime-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+p {
+  margin: 0;
+}
+
+.animeDetail > img {
+  height: 400px;
+}
+
+.info img {
+  height: 400px;
+}
+
+.MuiGrid-root {
+  justify-content: center !important;
+}
+
 .animeDetail img:hover {
-  transform: scale(110%);
+  transform: scale(105%);
   transition: .2s;
 }
 .animeDetail .info {
-  max-width: 15vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
+  gap: 4em;
+  text-align: justify;
 }
 
 .animeDetail .info .title{
@@ -106,7 +174,7 @@
 }
 
 .animeDetail .info .synopsis{
-  text-align: left;
+  text-align: justify;
 }
 
 .product .info > p {
@@ -116,34 +184,48 @@
 }
 
 .recette {
-  min-width: 25vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .track-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  background-color: white;
+  padding: 1em;
 }
 
 .track-card__cover {
-  width: 72px;
-  height: 72px;
+
+  width: 100%;
 }
 
 .track-card__info {
   display: flex;
   flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  height: 5em;
 }
 
 .tracks {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  width: 1000px;
 }
 
 .studio-container {
   position: relative;
-  width: 600px;
+  width: 1000px;
   height: 400px;
+}
+
+.studio {
+  width: 1000px;
 }
 
 .studio-container > iframe {
@@ -161,14 +243,128 @@
 }
 
 .random-image {
-  max-height: 100px;
-  max-width: 100px;
+  max-height: 70px;
+  max-width: 70px;
 }
 
 h1 {
   margin-top: 0!important;
   color: var(--orange);
   font-weight: 600;
-  font-size: 30px;
-  text-align: center;
+  font-size: 40px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.recipe-card {
+  padding: 2em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: #333333;
+  border-bottom: 1px solid orange;
+}
+
+.recipe-card__title {
+  color: #ff7d1a;
+}
+
+.recipe-card__author {
+  font-style: unset;
+  color: grey;
+}
+
+.track-card__author {
+  font-style: unset;
+  color: grey;
+}
+
+.new-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 2em;
+  margin-top: 2em;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.new-recipe__input {
+  width: 100%;
+}
+
+body {
+  background-color: #fff8f4;
+}
+
+h1 {
+  width: 1000px;
+  margin-bottom: 1em;
+}
+
+h3, h5, h4 {
+  margin: 0;
+  font-weight: unset;
+}
+
+.titlel {
+  width: unset;
+  margin-bottom: 0;
+}
+
+input, textarea {
+  background-color: white;
+  padding: 0.8em;
+  margin: 0;
+  font-family: unset;
+  outline: none;
+  border: 1px solid #ff7d1a6e;
+  width: 22em;
+}
+
+textarea {
+  height: 4em;
+  width: 100%;
+  resize: none;
+}
+
+h3 {
+  margin-bottom: 1em;
+}
+
+.trackss {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  background-color: #ff7d1a;
+  padding: 0.8em;
+  border-radius: 8px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  width: fit-content;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+
+button:hover {
+  background-color: white;
+  color: #ff7d1a;
+  outline: 2px solid #ff7d1a;
+  transition-property: all;
+  transition-duration: 0.1s;
 }

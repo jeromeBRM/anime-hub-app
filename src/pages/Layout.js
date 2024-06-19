@@ -77,18 +77,18 @@ const Layout = () => {
   return (
     <>
       <header className="App-header"
-      style={{ marginTop: "3vh"}}>
-        <img className="random-image" src={ img }></img>
+      >
         <Link
           to="/"
-          style={{ textDecoration: "none" , color: "#000", fontSize : "25px", color: "#F77D1A"}}
+          style={{ textDecoration: "none" , color: "#000", fontSize : "4em", color: "#F77D1A"}}
         >
-          <h1>AnimeHub 🍜</h1>
+          <h1 className="titlel">AnimeHub 🍜</h1>
         </Link>
+        <img className="random-image" src={ img }></img>
         { !credentials ?
           <div className="login">
-            <input type="text" placeholder="Nom d'utilisateur" onChange={ changeUsername }></input>
-            <input type="password" placeholder="Mot de passe" onChange={ changePassword }></input>
+            <input className="user-inp" type="text" placeholder="Nom d'utilisateur" onChange={ changeUsername }></input>
+            <input className="user-inp" type="password" placeholder="Mot de passe" onChange={ changePassword }></input>
             <button onClick={ connect }>Connexion</button>
           </div>
           : 
