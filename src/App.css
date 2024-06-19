@@ -149,6 +149,39 @@ p {
   height: 400px;
 }
 
+.loads {
+  height: 30px;
+  width: 30px;
+
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  transition-property: all;
+  transition-duration: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.active {
+  opacity: 100% !important;
+  z-index: 1;
+}
+
+.inactive {
+  opacity: 0% !important;
+  z-index: -1;
+}
+
 .MuiGrid-root {
   justify-content: center !important;
 }
