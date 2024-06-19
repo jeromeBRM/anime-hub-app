@@ -73,12 +73,13 @@
 
 .animeDetail {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 10vw;
+  gap: 4vw;
   width: 100vw;
   height: 85vh;
-  border: 2px solid red;
+  margin-top: 10vh;
+  padding-bottom: 250px!important;
 }
 
 .animeDetail img {
@@ -90,9 +91,7 @@
   transition: .2s;
 }
 .animeDetail .info {
-  border: 2px solid blue;
-  height: 55vh;
-  width: 30vw;
+  max-width: 15vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -103,6 +102,7 @@
   font-weight: 600;
   font-size: 30px;
   text-align: left;
+  margin-top: 0!important;
 }
 
 .animeDetail .info .synopsis{
@@ -113,6 +113,10 @@
   margin: 0;
   text-transform: capitalize;
   text-align: left;
+}
+
+.recette {
+  min-width: 25vw;
 }
 
 .track-card {
@@ -159,4 +163,12 @@
 .random-image {
   max-height: 100px;
   max-width: 100px;
+}
+
+h1 {
+  margin-top: 0!important;
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
 }
