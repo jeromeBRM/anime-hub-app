@@ -113,6 +113,7 @@ const AnimePage = () => {
       </div>
       <Outlet />
     </div>
+    </div>
   );
 };
 
